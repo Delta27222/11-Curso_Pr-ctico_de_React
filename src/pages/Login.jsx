@@ -1,5 +1,5 @@
 import React from 'react';  //Comando ---->> IMR
-import '../style/Login.scss';
+import '../styles/Login.scss';
 
 const Login = () => {       //Comando --->> SFC   RAFCE  RSC
     return (
