@@ -1,6 +1,9 @@
 import React from 'react';
+
+//Importando los estilos
 import '@styles/Header.scss';
 
+//Importamos las imagenes, los iconos y los logos
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart_notification.svg';
