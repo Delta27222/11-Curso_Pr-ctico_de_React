@@ -1,7 +1,7 @@
 import React from 'react';
 
-//Importamos los componentes
-import ProductList from '../containers/ProductList';
+//Importamos los containers
+import ProductList from '@containers/ProductList';
 
 const Home = () => {
 	return (

@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/NewPassword.scss';
+
+//Importando los estilos
+import '@styles/NewPassword.scss';
 
 const NewPassword = () => {
 	return (

@@ -1,6 +1,10 @@
 import React from 'react';
-import ProductItem from '../components/ProductItem';
-import '../styles/ProductList.scss';
+
+//Importando los componentes
+import ProductItem from '@components/ProductItem';
+
+//Importando los estilos
+import '@styles/ProductList.scss';
 
 const ProductList = () => {
 	return (

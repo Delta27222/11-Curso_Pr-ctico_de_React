@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/ProductItem.scss';
+
+//Importando los estilos
+import '@styles/ProductItem.scss';
 
 const ProductItem = () => {
 	return (

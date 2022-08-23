@@ -1,6 +1,10 @@
 import React from 'react';
-import ProductInfo from '../components/ProductInfo';
-import '../styles/ProductDetail.scss';
+
+//Importamos los componentes
+import ProductInfo from '@components/ProductInfo';
+
+//Importamos los estilos
+import '@styles/ProductDetail.scss';
 
 const ProductDetail = () => {
 	return (
