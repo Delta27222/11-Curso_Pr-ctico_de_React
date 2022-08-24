@@ -1,30 +1,51 @@
-import React from 'react';  //Comando ---->> IMR
-
-//Importando los estilos
+import React, { useRef, useState } from 'react';
 import '@styles/Login.scss';
+import logo from '@logos/logo_yard_sale.svg'
 
-const Login = () => {       //Comando --->> SFC   RAFCE  RSC
-    return (
-        <div className="login">
-            <div className="form_container">
-                <img src="/logos/logo_yard_sale.svg" alt="logo" className="logo"/>
+const Login = () => {
+    //Hacemos uso de un useState para saber si mostramos un error en pantalla
+    const [error, setError] = useState(false)
 
-                <h1 className="title">Create a new password</h1>
+    //Hacemos uso del hook useRef
+	const form = useRef(null);
 
-                <p className="subtitle">Enter a new password for your account</p>
+    //Creamos una funcion que hara el trabajo de guardar los valores de los imputs
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		const formData = new FormData(form.current);
+		const data = {
+			usename: formData.get('email'),
+			password: formData.get('password')
+		}
+        if (data.usename =='' || data.password ==''){
+            setError(!error);
+        }
+		console.log(data);
+	}
 
-                <form action="#" className="form">
-                    <label for="password" className="label">Password</label>
-                    <input type="password" id="password" placeholder="*********" className="input input-password"></input>
-
-                    <label for="new_password" className="label">Password</label>
-                    <input type="password" id="new_password" placeholder="*********" className="input input-password"></input>
-
-                    <input type="submit" value="Confirm" className="primary-button login-button"></input>
-                </form>
-            </div>
-        </div>
-    );
+	return (
+		<div className="Login">
+			<div className="Login-container">
+				<img src={logo} alt="logo" className="logo" />
+				<form action="/" className="form" ref={form}>
+					<label htmlFor="email" className="label">Email address</label>
+					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
+					<label htmlFor="password" className="label">Password</label>
+					<input type="password" name="password" placeholder="*********" className="input input-password" />
+					{error ? <h1 >ERROR MI PANA</h1> : null}	//TODO password o email incorrect
+                    <button
+						onClick={handleSubmit}
+						className="primary-button login-button">
+						Log in
+					</button>
+					<a href="/">Forgot my password</a>  
+				</form>
+				<button className="secondary-button signup-button">
+					Sign up
+				</button>
+			</div>
+		</div >
+	);
 }
 
 export default Login;
