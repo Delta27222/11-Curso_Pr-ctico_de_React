@@ -6,7 +6,7 @@ import ProductList from '@containers/ProductList';
 const Home = () => {
 	return (
 		<>
-			<h1>Voy por el vidio 20 del curso</h1>
+			<h1>Voy por el vidio 23 del curso</h1>
 			<ProductList />
 		</>
 	);

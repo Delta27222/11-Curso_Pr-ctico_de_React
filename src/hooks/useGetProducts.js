@@ -8,7 +8,7 @@ const useGetProducts = (API) => {
 
     useEffect(async () => {
         const response = await axios(API);
-        setProducts(response.data)
+        setProducts(response.data.results);    //setProducts(response.data)
     }, []);
     return products;
 };

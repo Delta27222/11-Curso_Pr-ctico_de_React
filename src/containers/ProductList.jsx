@@ -10,10 +10,13 @@ import '@styles/ProductList.scss';
 import useGetProducts from '@hooks/useGetProducts';
 
 //Link de la API
-const API = 'https://api.escuelajs.co/api/v1/products?limit=40&offset=1';
+const API = 'https://api.escuelajs.co/api/v1/products';
+
+const API2 = 'https://rickandmortyapi.com/api/character';
+
 
 const ProductList = () => {
-	const  products = useGetProducts(API);
+	const  products = useGetProducts(API2); 	//const  products = useGetProducts(API);
 	return (
 		<section className="main-container">
 			<div className="ProductList">

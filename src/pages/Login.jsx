@@ -32,7 +32,7 @@ const Login = () => {
 					<input type="text" name="email" placeholder="platzi@example.cm" className="input input-email" />
 					<label htmlFor="password" className="label">Password</label>
 					<input type="password" name="password" placeholder="*********" className="input input-password" />
-					{error ? <h1 >ERROR MI PANA</h1> : null}	//TODO password o email incorrect
+					{error ? <h1 >ERROR MI PANA</h1> : null}	{/* //TODO password o email incorrect */}
                     <button
 						onClick={handleSubmit}
 						className="primary-button login-button">
